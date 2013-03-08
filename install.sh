@@ -1,15 +1,3 @@
-#manual --
-wget http://nginx.org/keys/nginx_signing.key
-sudo apt-key add nginx_signing.key
-
-codename=`lsb_release -c -s`
-echo "deb http://nginx.org/packages/ubuntu/ $codename nginx
-deb-src http://nginx.org/packages/ubuntu/ $codename nginx"
-apt-get update
-apt-get install nginx
-#end manual
-
-----
 #!/bin/bash
 set -e -x
 

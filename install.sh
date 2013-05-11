@@ -13,11 +13,10 @@ wait
 apt-get -q -y update && apt-get install nginx
 wait
 
-#install mysql
+#install mysql client
 DEBIAN_FRONTEND=noninteractive
-apt-get -q -y install mysql-server mysql-client
+apt-get -q -y install mysql-client
 wait
-#sudo mysql_secure_installation
 
 #install memcached
 apt-get -q -y install memcached

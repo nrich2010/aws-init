@@ -4,8 +4,6 @@ set -e -x
 #prepare instance
 apt-get -q -y install python-software-properties
 wait
-apt-get -q -y update
-wait
 
 #install nginx
 add-apt-repository ppa:nginx/stable
@@ -13,13 +11,13 @@ wait
 apt-get -q -y update && apt-get install nginx
 wait
 
+#install memcached
+apt-get -q -y install memcached
+wait
+
 #install mysql client
 DEBIAN_FRONTEND=noninteractive
 apt-get -q -y install mysql-client
-wait
-
-#install memcached
-apt-get -q -y install memcached
 wait
 
 #install php
